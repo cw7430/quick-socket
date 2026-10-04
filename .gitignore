@@ -1,0 +1,89 @@
+# --------------------------------------------------
+# Go Build & Binaries
+# --------------------------------------------------
+# Binaries for programs and plugins
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Test binary, built with `go test -c`
+*.test
+
+# Output of the go coverage tool
+*.out
+*.prof
+
+# Common application build outputs
+bin/
+dist/
+/main
+/app
+/server
+
+# --------------------------------------------------
+# Live Reload & Dev Tools (Air, Fresh, etc.)
+# --------------------------------------------------
+# Air live-reload tool build output
+tmp/
+tmp_build/
+
+# --------------------------------------------------
+# Environment Variables & Secrets
+# --------------------------------------------------
+.env
+.env.*
+!.env.example
+!.env.template
+
+# --------------------------------------------------
+# Dependencies (Go Modules)
+# --------------------------------------------------
+# vendor/ 디렉터리는 팀 규약에 따라 관리됩니다.
+# vendor를 레포지토리에 커밋하지 않는 일반적인 구성인 경우 아래 주석을 해제하세요.
+# vendor/
+
+# --------------------------------------------------
+# IDE & Editor Settings
+# --------------------------------------------------
+# GoLand / IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# VS Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# Vim / Emacs
+*~
+*.swp
+*.swo
+.#*
+
+# --------------------------------------------------
+# Logs & Database Artifacts
+# --------------------------------------------------
+logs/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# --------------------------------------------------
+# OS Generated Files
+# --------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

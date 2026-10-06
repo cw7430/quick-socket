@@ -1,4 +1,6 @@
 set dotenv-load
+set shell := ["sh", "-cu"]
+set windows-shell := ["powershell.exe", "-NoLogo", "-Command"]
 
 default:
     just --list
@@ -11,6 +13,14 @@ dev:
 
 build:
     go build -o ./bin/app ./cmd/server
+
+[windows]
+doc:
+     & "$(go env GOPATH)\bin\swag.exe" init -g cmd/server/main.go
+
+[unix]
+doc:
+    "$(go env GOPATH)/bin/swag" init -g cmd/server/main.go
 
 [windows]
 clean:

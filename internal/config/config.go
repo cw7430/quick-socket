@@ -3,14 +3,13 @@ package config
 import (
 	"fmt"
 	"os"
-
-	"github.com/gin-gonic/gin"
 )
 
 type Environment string
 
 const (
 	EnvDev   Environment = "dev"
+	EnvTest  Environment = "test"
 	EnvStage Environment = "stage"
 	EnvProd  Environment = "prod"
 )
@@ -44,12 +43,7 @@ func Load() (*Config, error) {
 	env := Environment(getEnv("APP_ENV", string(EnvDev)))
 
 	switch env {
-	case EnvDev:
-		gin.SetMode(gin.DebugMode)
-
-	case EnvStage, EnvProd:
-		gin.SetMode(gin.ReleaseMode)
-
+	case EnvDev, EnvTest, EnvStage, EnvProd:
 	default:
 		return nil, fmt.Errorf("invalid APP_ENV: %s", env)
 	}

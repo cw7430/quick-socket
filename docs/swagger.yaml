@@ -1,0 +1,17 @@
+basePath: /realtime/v1
+info:
+  contact: {}
+  description: Quick Chat Realtime Server API
+  title: Quick Chat Realtime API
+  version: "1.0"
+paths:
+  /health:
+    get:
+      description: 서버 상태를 확인합니다.
+      responses:
+        "204":
+          description: No Content
+      summary: Health check
+      tags:
+      - Health
+swagger: "2.0"

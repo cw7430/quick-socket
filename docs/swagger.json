@@ -1,0 +1,26 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "Quick Chat Realtime Server API",
+        "title": "Quick Chat Realtime API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "basePath": "/realtime/v1",
+    "paths": {
+        "/health": {
+            "get": {
+                "description": "서버 상태를 확인합니다.",
+                "tags": [
+                    "Health"
+                ],
+                "summary": "Health check",
+                "responses": {
+                    "204": {
+                        "description": "No Content"
+                    }
+                }
+            }
+        }
+    }
+}
